@@ -1,26 +1,4 @@
-#include <iostream>
-#include <string>
-using namespace std;
-
-static string board[22][12];
-const int block[7][4][2] = {
-	{ {1,5}, {2,5}, {3,5}, {4,5} },
-	{ {1,5}, {2,5}, {3,5}, {3,6} },
-	{ {1,6}, {2,6}, {3,6}, {3,5} },
-	{ {1,5}, {2,5}, {2,6}, {3,6} },
-	{ {1,6}, {2,6}, {2,5}, {3,6} },
-	{ {1,5}, {1,6}, {2,5}, {2,6} },
-	{ {1,6}, {2,6}, {1,5}, {2,7} } };
-const int BT[7][6][2] = {
-	{ {1,1}, {-1,-1}, {-2,-2}, {-1,-1}, {1,1},{2,2} },
-	{ {1,1}, {-1,-1}, {0,-2}, {1,-1}, {-1,1}, {-2,0} },
-	{ {1,1}, {-1,-1}, {-2,0}, {1,-1}, {-1,1}, {0,2} },
-	{ {1,1}, {-1,1}, {-2,0}, {-1,-1}, {1,-1}, {2,0} },
-	{ {1,-1}, {-1,-1}, {-2,0}, {-1,1}, {1,1}, {2,0} },
-	{ {1,1}, {-1,1}, {1,-1}, {1,-1}, {1,1}, {-1,-1} }
-};
-void board_setting();
-void board_print();
+#include "header.h"
 
 int main()
 {
@@ -53,5 +31,24 @@ void board_print()
 			cout << board[i][j];
 		}
 		cout << endl;
+	}
+}
+
+void block_move()
+{
+	int block_switch = 0;
+	int direc;
+	if (kbhit()) {
+		direc = getch();
+		switch(direc) {
+			case 'w':
+				break;
+			case 'a':
+				break;
+			case 's':
+				break;
+			case 'd':
+				break;
+		}
 	}
 }
