@@ -2,6 +2,7 @@
 #include <string>
 #include <conio.h>
 #include <cstdlib>
+#include <ctime>
 using namespace std;
 
 static string board[22][12];

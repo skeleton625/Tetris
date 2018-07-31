@@ -2,6 +2,7 @@
 
 int main()
 {
+	srand((unsigned int)time(NULL));
 	board_setting();
 	board_print();
 	return 0;
@@ -38,6 +39,7 @@ void block_move()
 {
 	int block_switch = 0;
 	int direc;
+	int block_num = rand()%7;
 	if (kbhit()) {
 		direc = getch();
 		switch(direc) {
@@ -49,6 +51,7 @@ void block_move()
 				break;
 			case 'd':
 				break;
+			default:
 		}
 	}
 }
